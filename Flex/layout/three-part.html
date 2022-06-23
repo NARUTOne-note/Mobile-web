@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      height: 100vh;
+      padding: 0 50px;
+    }
+
+    body > div {
+      margin: 16px 0;
+    }
+
+    .demo {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 16px;
+      background: paleturquoise;
+      border-radius: 6px;
+    }
+
+    .box {
+      height: 100px;
+      padding: 8px;
+      border-radius: 4px;
+      margin: 8px;
+      background: peachpuff;
+    }
+
+    .item1 {
+
+    }
+
+    .item2 {
+      flex: auto;
+    }
+
+    .item3 {
+      flex-basis: 200px;
+    }
+
+    .item4 {
+      flex: auto;
+    }
+    .item5 {
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="demo">
+    <div class="box item1">
+      titlexxxxasdasda
+    </div>
+    <div class="box item2">
+      content
+    </div>
+    <div class="box item3">
+      extend
+    </div>
+  </div>
+  <div class="demo">
+    <div class="box item4">
+      content
+      <br>
+      second
+    </div>
+    <div class="box item5">
+      extendxxxxxxxxx
+    </div>
+  </div>
+</body>
+</html>
