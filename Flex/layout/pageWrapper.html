@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PageWrapper</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      height: 100vh;
+      padding: 0 50px;
+    }
+    .more {
+      background: peachpuff;
+      height: 1000px;
+      width: 2000px;
+    }
+
+    .page-wrapper {
+      background: #e3e3e3;
+      padding: 16px;
+
+      display: flex;
+      flex-direction: column;
+      /* flex-direction: column-reverse; */
+      /* flex-direction: row; */
+      /* flex-direction: row-reverse; */
+      
+      height: 100%;
+      flex: 1;
+    }
+
+    .page-wrapper > div {
+      margin-bottom: 16px;
+    }
+    .page-wrapper > div:last-child {
+      margin-bottom: 0;
+    }
+
+    .page-fix {
+      background: powderblue;
+      padding: 12px;
+    }
+
+    .page-content {
+      background: rgb(247, 242, 189);
+      padding: 12px;
+      overflow-y: auto;
+
+      flex-grow: 1;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="page-fix">
+      flx
+    </div>
+    <div class="page-content">
+      <div class="more"></div>
+    </div>
+  </div>
+</body>
+</html>
