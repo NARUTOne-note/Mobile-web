@@ -1,0 +1,129 @@
+body > div {
+  margin: 60px;
+}
+
+.wrapper {
+  /* 声明一个grid容器 */
+  display: grid;
+  /*  声明列的宽度  */
+  grid-template-columns: repeat(3, 200px);
+  /*  声明行的高度  */
+  grid-template-rows: 100px 200px;
+   /*  声明行间距和列间距  */
+   grid-gap: 20px;
+}
+
+.wrapper-repeat {
+  display: grid;
+  grid-template-columns: 200px 100px 200px;
+  grid-gap: 5px;
+  /*  2行，而且行高都为 50px  */
+  grid-template-rows: repeat(2, 50px);
+}
+
+.wrapper-auto-fill {
+  display: grid;
+  width: 60vw;
+  padding: 8px;
+  border: 1px solid #e3e3e3;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-gap: 5px;
+  grid-auto-rows: 50px;
+}
+
+.wrapper-fr {
+  display: grid;
+  width: 60vw;
+  padding: 8px;
+  border: 1px solid #e3e3e3;
+  grid-template-columns: 200px 1fr 2fr;
+  grid-gap: 5px;
+  grid-auto-rows: 50px;
+}
+
+.wrapper-minmax {
+  display: grid;
+  width: 80vw;
+  padding: 8px;
+  border: 1px solid #e3e3e3;
+  grid-template-columns: 1fr 200px minmax(200px, 1fr);
+  grid-gap: 5px;
+  grid-auto-rows: 50px;
+}
+
+.wrapper-auto {
+  display: grid;
+  width: 80vw;
+  padding: 8px;
+  border: 1px solid #e3e3e3;
+  grid-template-columns: 100px auto 100px;
+  grid-gap: 5px;
+  grid-auto-rows: 50px;
+}
+
+.wrapper-areas {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 120px  120px  120px;
+  grid-template-areas:
+    ". header ."
+    "sidebar content content";
+  background-color: #fff;
+  color: #444;
+}
+
+.wrapper-auto-flow-dense {
+  display: grid;
+  grid-template-columns: 100px 200px 100px;
+  grid-auto-flow: row dense;
+  grid-gap: 5px;
+  grid-auto-rows: 50px;
+}
+
+.header-area {
+  grid-area: header
+}
+
+.sidebar-area {
+  grid-area: sidebar
+}
+
+.content-area {
+  grid-area: content
+}
+
+.one {
+  background: #19CAAD;
+}
+.two { 
+  background: #8CC7B5;
+}
+.three {
+  background: #D1BA74;
+}
+.four {
+  background: #BEE7E9;
+}
+.five {
+  background: #E6CEAC;
+}
+.six {
+  background: #ECAD9E;
+}
+.six-2 {
+  grid-column-start: span 2;
+}
+.seven {
+  background: #BEEDC7;
+}
+.eight {
+  background: #F4606C;
+}
+.nine {
+  background: #A0EEE1;
+}
+.item {
+  text-align: center;
+  font-size: 200%;
+  color: #fff;
+}
