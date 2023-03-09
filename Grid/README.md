@@ -12,7 +12,7 @@ flex 布局是一维布局，Grid 布局是二维布局。flex 布局一次只�
 
 - `display`：`grid` 则该容器是一个块级元素，`inline-grid` 则容器元素为行内元素
 
-- `grid-template-columns`: 列宽, `grid-template-rows`: 行高
+- `grid-template-columns`: 列宽, `grid-template-rows`: 行高，显式网格配置
   - 声明三列（行），宽（高）度分别为 `200px 100px 200px`
   - `repeat(count, value)`: 重复次数, 重复值 `repeat(2, 50px)`
   - `auto-fill` 关键词: `repeat(auto-fill, 200px)`,  200 px，但数量是不固定的，容器能够容纳得下，就可以放置元素
@@ -32,4 +32,24 @@ flex 布局是一维布局，Grid 布局是二维布局。flex 布局一次只�
   - `column`: 从列开始
   - `row dense`，`column dense` 尽可能填满表格
 
-## 项目属性
+- `justify-items` 单元格内容水平位置，`align-items` 单元格内容垂直位置
+  - `start | end | center | stretch`
+  - `place-items` 简写属性
+
+- `justify-content` 属性、`align-content` 属性，整个内容区域在容器里面
+  - `start | end | center | stretch | space-around | space-between | space-evenly`
+
+- `grid-auto-columns` 属性和 `grid-auto-rows` 属性，隐式（超出的）网格配置
+  - 属性配置对应 `grid-template-columns`及 `grid-template-rows`
+
+## 单元格属性
+
+- `grid-column-start` 属性、`grid-column-end` 属性、`grid-row-start` 属性以及 `grid-row-end` 属性，指定网格项目所在的四个边框，分别定位在哪根网格线，从而指定项目的位置索引
+  - grid-column-start 属性：左边框所在的垂直网格线
+  - grid-column-end 属性：右边框所在的垂直网格线
+  - grid-row-start 属性：上边框所在的水平网格线
+  - grid-row-end 属性：下边框所在的水平网格线
+- `grid-area` 属性指定项目放在哪一个区域
+- `justify-self` 属性、`align-self` 属性以及 `place-self` 属性，单个单元格内容位置
+  - `start | end | center | stretch`
+  - `place-self` 简写属性

@@ -92,6 +92,16 @@ body > div {
   grid-area: content
 }
 
+.wrapper-grid-auto-rows {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  /* 只设置了两行，但实际的数量会超出两行，超出的行高会以 grid-auto-rows 算 */
+  grid-template-rows: 100px 100px;
+  grid-gap: 10px 20px;
+  /* 隐式行高 50 */
+  grid-auto-rows: 50px;
+}
+
 .one {
   background: #19CAAD;
 }
