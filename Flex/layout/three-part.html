@@ -29,6 +29,14 @@
       border-radius: 6px;
     }
 
+    .demo-vertical {
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      background: paleturquoise;
+      border-radius: 6px;
+    }
+
     .box {
       height: 100px;
       padding: 8px;
@@ -37,8 +45,11 @@
       background: peachpuff;
     }
 
-    .item1 {
-
+    .box-v {
+      padding: 8px;
+      border-radius: 4px;
+      margin: 8px;
+      background: peachpuff;
     }
 
     .item2 {
@@ -52,8 +63,17 @@
     .item4 {
       flex: auto;
     }
-    .item5 {
 
+    .item8 {
+      flex: auto;
+    }
+
+    .h500 {
+      height: 500px;
+    }
+
+    .box-v-content {
+      height: 100%;
     }
 
   </style>
@@ -78,6 +98,19 @@
     </div>
     <div class="box item5">
       extendxxxxxxxxx
+    </div>
+  </div>
+  <div class="demo-vertical h500">
+    <div class="box-v item6">
+      filter form
+    </div>
+    <div class="box-v item7">
+      desc
+    </div>
+    <div class="box-v item8">
+      <div class="box-v-content">
+        content
+      </div>
     </div>
   </div>
 </body>

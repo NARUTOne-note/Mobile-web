@@ -114,6 +114,9 @@ body > div {
 .four {
   background: #BEE7E9;
 }
+.four-2 {
+  grid-row-start: span 2;
+}
 .five {
   background: #E6CEAC;
 }
