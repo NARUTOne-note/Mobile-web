@@ -36,32 +36,41 @@
 				display: flex;
 				
 				/* flex-direction: column; */
-				flex-direction: column-reverse;
-				flex-grow:1;
-
-
-				/* flex-direction: row; */
-				/* flex-direction: row-reverse; */
+				/* flex-direction: column-reverse; */
 				/* flex-grow:1; */
-				/* height: 0px; */
 
+
+				flex-direction: row;
+				/* flex-direction: row-reverse; */
+				flex-grow:1;
+				height: 0px;
 				border: 1px solid red;
 			}
 			.content-fix {
 				padding: 8px;
 				background: palevioletred;
 			}
+			.content-fix-overflow {
+				flex-grow: 1;
+				overflow-y: auto;
+			}
 			.content-body {
+				padding: 8px;
+				background: red;
 				flex-grow: 1;
 
-				/* 配合 row 使用 */
-				height: 0; 
+				/* 配合 column 模式使用 */
+				/* height: 0;  */
 
 				overflow-y: auto;
 			}
 			.desc {
 				height: 1000px;
 				background: peachpuff;
+			}
+			.desc-fix {
+				height: 1000px;
+				background: rgb(193, 255, 185);
 			}
 	</style>
 </head>
@@ -73,7 +82,9 @@
 				<p>desc</p>
 			</div>
 			<div class="content">
-				<div class="content-fix">fix</div>
+				<div class="content-fix content-fix-overflow">
+					<div class="desc-fix"></div>
+				</div>
 				<div class="content-body">
 					<div class="desc"></div>
 				</div>
